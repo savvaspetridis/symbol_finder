@@ -17,13 +17,12 @@ extract_links = function(search_results){
 }
 
 goog = function(t){
-  // var savvas_key = 'AIzaSyAKSU-gzN9XFg1UFO6Z5ZAOl01Q9qEO-jY';
-  var gerry_key = 'AIzaSyBBPp6yXF4kRJutoMaVx6DGW8cCia75iGA';
+  var api_key = "enter your api key here"
   return $.ajax({
             type: "GET",
             dataType: 'JSON', 
             url: "https://www.googleapis.com/customsearch/v1",
-            data: ({ 'key':  gerry_key,
+            data: ({ 'key':  api_key,
                      'cx': '015890050991066315514:iz21fmvdyja',
                      'alt':  'json',
                      'q':  t,
@@ -39,8 +38,7 @@ goog = function(t){
 }
 
 cluster_google_search = function(cluster_title){
-  // var savvas_key = 'AIzaSyAKSU-gzN9XFg1UFO6Z5ZAOl01Q9qEO-jY';
-  var gerry_key = 'AIzaSyBBPp6yXF4kRJutoMaVx6DGW8cCia75iGA';
+  var api_key = "enter your google api_key here";
   var async_request=[];
   var responses=[];
   var cluster_words = cluster_title.split(",");
@@ -51,7 +49,7 @@ cluster_google_search = function(cluster_title){
         type: "GET",
         dataType: 'JSON', 
         url: "https://www.googleapis.com/customsearch/v1",
-        data: ({ 'key':  gerry_key,
+        data: ({ 'key':  api_key,
                  'cx': '015890050991066315514:iz21fmvdyja',
                  'alt':  'json',
                  'q':  cluster_word,
@@ -70,7 +68,7 @@ cluster_google_search = function(cluster_title){
         type: "GET",
         dataType: 'JSON', 
         url: "https://www.googleapis.com/customsearch/v1",
-        data: ({ 'key':  gerry_key,
+        data: ({ 'key':  api_key,
                  'cx': '015890050991066315514:iz21fmvdyja',
                  'alt':  'json',
                  'q':  concept_searched + " " + cluster_word,
@@ -162,7 +160,6 @@ multi_google_search = function(term,parent_term,tree_title_click,tree_node_key){
 
 /*
 google_all_clusters = function(clusters){
-  var savvas_key = 'AIzaSyAKSU-gzN9XFg1UFO6Z5ZAOl01Q9qEO-jY';
   var async_request=[];
   var responses=[];
   for(var i = 0; i < clusters.length; i++){
@@ -211,8 +208,7 @@ google_all_clusters = function(clusters){
 
 
 google_all_clusters = function(clusters){
-  // var savvas_key = 'AIzaSyAKSU-gzN9XFg1UFO6Z5ZAOl01Q9qEO-jY';
-  var gerry_key = 'AIzaSyBBPp6yXF4kRJutoMaVx6DGW8cCia75iGA';
+  var api_key = "";
   var async_request=[];
   var responses=[];
   var cluster_dict = {};
@@ -240,7 +236,7 @@ google_all_clusters = function(clusters){
             type: "GET",
             dataType: 'JSON', 
             url: "https://www.googleapis.com/customsearch/v1",
-            data: ({ 'key':  gerry_key,
+            data: ({ 'key':  api_key,
                      'cx': '015890050991066315514:iz21fmvdyja',
                      'alt':  'json',
                      'q':  concept_searched + " " +  cluster_word,
@@ -308,13 +304,12 @@ $.when.apply(null,async_request).done(function(){
 
 
 root_google_search = function(term,term_image_grid,padding_div,main_div){
-  // savvas_key = 'AIzaSyAKSU-gzN9XFg1UFO6Z5ZAOl01Q9qEO-jY';
-  var gerry_key = 'AIzaSyBBPp6yXF4kRJutoMaVx6DGW8cCia75iGA';
+  var api_key = "";
   $.ajax({
             type: "GET",
             dataType: 'JSON', 
             url: "https://www.googleapis.com/customsearch/v1",
-            data: ({ 'key':  gerry_key,
+            data: ({ 'key':  api_key,
                      'cx': '015890050991066315514:iz21fmvdyja',
                      'alt':  'json',
                      'q':  term,
@@ -346,13 +341,12 @@ root_google_search = function(term,term_image_grid,padding_div,main_div){
 // Conducts a google image search! returns the urls
 google_search = function(term,is_start,tree_click){
   console.log('performing google search!')
-  // savvas_key = 'AIzaSyAKSU-gzN9XFg1UFO6Z5ZAOl01Q9qEO-jY';
-  var gerry_key = 'AIzaSyBBPp6yXF4kRJutoMaVx6DGW8cCia75iGA';
+  var api_key = "";
   $.ajax({
             type: "GET",
             dataType: 'JSON', 
             url: "https://www.googleapis.com/customsearch/v1",
-            data: ({ 'key':  gerry_key,
+            data: ({ 'key':  api_key,
                      'cx': '015890050991066315514:iz21fmvdyja',
                      'alt':  'json',
                      'q':  term,

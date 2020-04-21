@@ -6,6 +6,8 @@
 */
 
 
+var api_key = "AIzaSyByCCQQGVOYjE-Ecg-Yq4rXOA27fopyahg"
+
 // Extracts the actual urls from the Google API results
 extract_links = function(search_results){
   urls = [];
@@ -17,7 +19,8 @@ extract_links = function(search_results){
 }
 
 goog = function(t){
-  var api_key = "enter your api key here"
+  
+
   return $.ajax({
             type: "GET",
             dataType: 'JSON', 
@@ -38,7 +41,7 @@ goog = function(t){
 }
 
 cluster_google_search = function(cluster_title){
-  var api_key = "enter your google api_key here";
+  // var api_key = "enter your google api_key here";
   var async_request=[];
   var responses=[];
   var cluster_words = cluster_title.split(",");
@@ -208,7 +211,7 @@ google_all_clusters = function(clusters){
 
 
 google_all_clusters = function(clusters){
-  var api_key = "";
+  // var api_key = "";
   var async_request=[];
   var responses=[];
   var cluster_dict = {};
@@ -304,7 +307,7 @@ $.when.apply(null,async_request).done(function(){
 
 
 root_google_search = function(term,term_image_grid,padding_div,main_div){
-  var api_key = "";
+  // var api_key = "";
   $.ajax({
             type: "GET",
             dataType: 'JSON', 
@@ -341,7 +344,7 @@ root_google_search = function(term,term_image_grid,padding_div,main_div){
 // Conducts a google image search! returns the urls
 google_search = function(term,is_start,tree_click){
   console.log('performing google search!')
-  var api_key = "";
+  // var api_key = "";
   $.ajax({
             type: "GET",
             dataType: 'JSON', 

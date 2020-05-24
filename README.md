@@ -9,7 +9,7 @@ python3 app.py
 
 Set up:
 1. run
-uncompress data/strength.SWOW-EN.R123.csv.Z 
+uncompress swow/strength.SWOW-EN.R123.csv.Z 
 
 2. Get 
 
